@@ -6,9 +6,23 @@
 
 .side-panel-header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
+  left: 65px;
+  width: fit-content;
+}
+
+.side-panel-header-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  width: fit-content;
+  top: 0;
+  right: 0;
 }
 
 .close-button {

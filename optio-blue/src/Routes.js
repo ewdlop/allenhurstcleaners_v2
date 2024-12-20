@@ -17,10 +17,12 @@ const AppRoutes = () => {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
-                <Route path="/reviews" element={<Reviews />} />
                 <Route path="/contact" element={<Contact />} />
                 {process.env.NODE_ENV === 'development' && (
-                    <Route path="/sandbox" element={<Sandbox />} />
+                    <>
+                        <Route path="/reviews" element={<Reviews />} />
+                        <Route path="/sandbox" element={<Sandbox />} />
+                    </>
                 )}
             </Routes>
         </>

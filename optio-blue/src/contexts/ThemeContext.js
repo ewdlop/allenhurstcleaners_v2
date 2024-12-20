@@ -1,5 +1,5 @@
 // Dependencies
-import React, { createContext, useState, useMemo, useContext } from 'react';
+import React, { createContext, useState, useMemo, useContext, useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Utils
@@ -10,7 +10,25 @@ const ThemeContext = createContext();
 export const useThemeContext = () => useContext(ThemeContext);
 
 export const ThemeContextProvider = ({ children }) => {
-    const [themeMode, setThemeMode] = useState('light');
+    const getInitialThemeMode = () => {
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return prefersDarkMode ? 'dark' : 'light';
+    };
+
+    const [themeMode, setThemeMode] = useState(getInitialThemeMode);
+
+    useEffect(() => {
+        const handleChange = (e) => {
+            setThemeMode(e.matches ? 'dark' : 'light');
+        };
+
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        mediaQuery.addEventListener('change', handleChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleChange);
+        };
+    }, []);
 
     const toggleTheme = () => {
         setThemeMode((prevMode) => {

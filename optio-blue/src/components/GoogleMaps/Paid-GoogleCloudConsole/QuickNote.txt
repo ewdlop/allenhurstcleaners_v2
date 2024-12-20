@@ -1,0 +1,2 @@
+All JS files in this folder work with a paid or trial based Google Cloud Platform Console subscription.
+My trial period ended, therefore, I've "archived" my previous work within this folder.

@@ -7,13 +7,13 @@ import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { Box, CircularProgress, Typography } from '@mui/material';
 
 // Hooks
-import usePlaceDetails from '../../hooks/usePlaceDetails';
+import usePlaceDetails from '../../../hooks/usePlaceDetails';
 
 // Components
 import Gtooltip from './Gtooltip';
 
 // Utils
-import { logEvent } from '../../utils/Ganalytics';
+import { logEvent } from '../../../utils/Ganalytics';
 
 // Map Styles
 const containerStyle = {

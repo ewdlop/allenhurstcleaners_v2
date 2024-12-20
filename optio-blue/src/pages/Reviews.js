@@ -5,8 +5,8 @@ import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { Typography, Box, Container, Paper } from '@mui/material'
 
 // Components
-import Gmap from '../components/GoogleMaps/Gmap';
-import Greviews from '../components/GoogleMaps/Greviews'
+import Gmap from '../components/GoogleMaps/Paid-GoogleCloudConsole/Gmap';
+import Greviews from '../components/GoogleMaps/Paid-GoogleCloudConsole/Greviews'
 
 // Utils
 import { logPageView, logTiming, logEvent } from '../utils/Ganalytics';

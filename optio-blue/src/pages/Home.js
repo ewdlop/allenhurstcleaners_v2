@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useState, useRef, useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 // MUI Components
 import { Container, Paper, Typography, Box } from '@mui/material';
@@ -9,21 +9,14 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 // Components
-import Gmap from '../components/GoogleMaps/Gmap';
+import FreeGmap from '../components/GoogleMaps/FreeGmap';
 
 // Utils
 import images from '../utils/ImportImages';
 import { logPageView, logTiming } from '../utils/Ganalytics';
 
 const Home = () => {
-    const [map, setMap] = useState(null);
-    const mapRef = useRef(null);
-
-    const handleMapLoad = useCallback((mapInstance) => {
-        mapRef.current = mapInstance;
-        setMap(mapInstance);
-    }, []);
-
+    // Google Analytics
     useEffect(() => {
         logPageView();
         const startTime = performance.now();
@@ -57,8 +50,7 @@ const Home = () => {
                 </Paper>
 
                 {/* Google Map Component */}
-                <Gmap id="map-home" onLoad={handleMapLoad} display={'visible'} />
-                {map && (<></>)} {/* Removes warning for declared but unused 'map' */}
+                <FreeGmap />
 
                 {/* Quick Info */}
                 <Paper elevation={3} sx={{ padding: 2 }}>

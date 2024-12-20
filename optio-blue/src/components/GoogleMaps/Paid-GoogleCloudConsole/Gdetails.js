@@ -5,7 +5,7 @@ import React from 'react';
 import { CircularProgress, Typography, Link, Box, useMediaQuery, useTheme } from '@mui/material';
 
 // Hooks
-import usePlaceDetails from '../../hooks/usePlaceDetails';
+import usePlaceDetails from '../../../hooks/usePlaceDetails';
 
 // Components
 import Glink from './Glink';

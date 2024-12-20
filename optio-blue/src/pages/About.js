@@ -7,56 +7,11 @@ import { Container, Paper, Typography, Grid2, Box } from '@mui/material';
 // Components
 import Tile from '../components/Tile';
 
+// Contstants
+import AboutTileDetails from '../constants/AboutTileDetails';
+
 // Utils
 import { logPageView, logTiming } from '../utils/Ganalytics';
-
-const tilesData = [
-    {
-        frontText: 'Dry Cleaning',
-        backText: 'Treat, Clean, and Steam!',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Laundry',
-        backText: 'Our laundry service for men\'s button- down shirts ensures that each shirt is machine washed and machine pressed to perfection. On a hanger or in a box!',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Alterations',
-        backText: 'Tailors, seemstresses, and dressmakers can alter clothes to fit an individual\'s unique body shape.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Pressing',
-        backText: 'Hand pressing services, steaming and ironing.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Leather',
-        backText: 'Revitalizes and brings back the original shine and vitality to your leather and suede items.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Fur',
-        backText: 'Restores the luxurious feel and appearance of your fur items.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Bridal',
-        backText: 'Protects and preserves your wedding dress, keeping its charm and splendor intact.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Drapes',
-        backText: 'Refreshes and cleans your drapes, restoring their original beauty.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-    {
-        frontText: 'Table & Bedding',
-        backText: 'We can process sheets, comforters, table cloths, napkins, and limited blankets in a special cycle that freshens your linens and revitalizes them.',
-        backgroundImage: 'url-to-image-1.jpg'
-    },
-];
 
 const About = () => {
     useEffect(() => {
@@ -72,9 +27,9 @@ const About = () => {
     return (
         <>
             <Container>
-                {/* Who We Are Section */}
                 <>
-                    <Typography variant="h4" align='center' gutterBottom>
+                    {/* Header */}
+                    <Typography variant="h4" sx={{ padding: 2, marginTop: 2, marginBottom: 2, textAlign: 'center' }}>
                         Who We Are:
                     </Typography>
                     <Paper elevation={3} sx={{ padding: 2, marginBottom: 2 }}>
@@ -93,7 +48,7 @@ const About = () => {
 
                 {/* What We Do: Section */}
                 <>
-                    <Typography variant="h4" align='center' gutterBottom>
+                    <Typography variant="h4" sx={{ padding: 2, marginTop: 2, marginBottom: 2, textAlign: 'center' }}>
                         What We Do:
                     </Typography>
                     <Paper elevation={3} sx={{ padding: 2, marginBottom: 2 }}>
@@ -127,12 +82,12 @@ const About = () => {
 
                 {/* What Can We Provide: Section */}
                 <>
-                    <Typography variant="h4" align='center' gutterBottom>
+                    <Typography variant="h4" sx={{ padding: 2, marginTop: 2, marginBottom: 2, textAlign: 'center' }}>
                         What Can We Provide:
                     </Typography>
                     <Paper elevation={3} sx={{ padding: 2, marginBottom: 2 }}>
                         <Grid2 container spacing={2} display={'flex'} justifyContent={'center'} alignContent={'center'}>
-                            {tilesData.map((tile, index) => (
+                            {AboutTileDetails.map((tile, index) => (
                                 <Grid2 item key={index} xs={6} sm={4} md={3} lg={3} xl={3}>
                                     <Tile
                                         frontText={tile.frontText}

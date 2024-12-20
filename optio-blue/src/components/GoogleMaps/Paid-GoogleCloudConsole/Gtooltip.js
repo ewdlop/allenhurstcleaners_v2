@@ -5,7 +5,7 @@ import React from 'react';
 import { Typography, Link, Box } from '@mui/material';
 
 // Hooks
-import useIsMobile from '../../hooks/useIsMobile';
+import useIsMobile from '../../../hooks/useIsMobile';
 
 // Components
 import Glink from './Glink';

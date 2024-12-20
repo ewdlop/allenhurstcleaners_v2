@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // MUI Components
-import { Paper, Typography, TextField, Button, Box } from '@mui/material';
+import { Typography, TextField, Button, Box } from '@mui/material';
 
 // Utils
 import { logEvent } from '../utils/Ganalytics';
@@ -28,38 +28,36 @@ const ContactForm = () => {
 
     return (
         <>
-            <Paper elevation={3} sx={{ padding: 2, marginBottom: 2 }}>
-                <Typography variant="h5" gutterBottom>
-                    Send Us a Message
-                </Typography>
-                <form onSubmit={handleSubmit}>
-                    <TextField
-                        fullWidth
-                        label="Name"
-                        name="name"
-                        margin="normal"
-                        required
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                    <TextField
-                        fullWidth
-                        label="Message"
-                        name="message"
-                        multiline
-                        rows={4}
-                        margin="normal"
-                        required
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    />
-                    <Box display="flex" justifyContent="flex-end" mt={2}>
-                        <Button type="submit" variant="contained" color="primary">
-                            Send Message
-                        </Button>
-                    </Box>
-                </form>
-            </Paper>
+            <Typography variant="h5" gutterBottom>
+                Send Us a Message
+            </Typography>
+            <form onSubmit={handleSubmit}>
+                <TextField
+                    fullWidth
+                    label="Name"
+                    name="name"
+                    margin="normal"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <TextField
+                    fullWidth
+                    label="Message"
+                    name="message"
+                    multiline
+                    rows={4}
+                    margin="normal"
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+                <Box display="flex" justifyContent="flex-end" mt={2}>
+                    <Button type="submit" variant="contained" color="primary">
+                        Send Message
+                    </Button>
+                </Box>
+            </form>
         </>
     );
 };

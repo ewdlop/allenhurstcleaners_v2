@@ -6,6 +6,7 @@ This web application integrates with the Google Maps API Platform to provide det
 
 ## Table of Contents
 
+- [1.0.0 - 2024-12-20](#100---2024-12-20)
 - [0.9.0 - 2024-10-01](#090---2024-10-01)
 - [0.8.0 - 2024-10-01](#080---2024-10-01)
 - [0.7.0 - 2024-09-27](#070---2024-09-27)
@@ -18,6 +19,23 @@ This web application integrates with the Google Maps API Platform to provide det
 - [0.1.0 - 2024-09-10](#010---2024-09-10)
 
 ## ChangeLog
+
+### [1.0.0] - 2024-12-20
+
+- `Pull Request` : Google Cloud Platform Console Trial Period Ended
+  - Update Readme
+  - Refactor Home page to replace Gmap component with FreeGmap and remove unused state management
+  - Refactored Services with add ServiceDetails constant
+  - Add AboutTileDetails constant and refactor About page to use it
+  - Refactor Contact page to streamline layout and add contact details and hours of operation constants
+  - Add FreeGmap component with geolocation and map controls functionality
+  - Refactor SidePanel for mobile responsiveness and improve layout
+  - Hid Reviews and Sandbox routes for development mode only
+  - "Archived" Gmaps & more that require payment.
+  - Implement responsive theme mode based on user system preference
+  - Version Bump
+
+---
 
 - Update Readmes
 

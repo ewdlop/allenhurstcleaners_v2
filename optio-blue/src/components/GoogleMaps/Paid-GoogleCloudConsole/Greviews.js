@@ -5,10 +5,10 @@ import React from 'react';
 import { CircularProgress, Typography, Box, useMediaQuery, useTheme, Card, CardContent, CardHeader, Avatar, Button } from '@mui/material';
 
 // Hooks
-import usePlaceDetails from '../../hooks/usePlaceDetails';
+import usePlaceDetails from '../../../hooks/usePlaceDetails';
 
 // Utils
-import { logEvent } from '../../utils/Ganalytics';
+import { logEvent } from '../../../utils/Ganalytics';
 
 const Greviews = ({ map, placeId }) => {
     const { place, status, error } = usePlaceDetails(map, placeId);
