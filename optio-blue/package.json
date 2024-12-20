@@ -1,7 +1,6 @@
 {
   "name": "optio-blue",
   "version": "1.0.0",
-  "homepage": "https://daydin14.github.io/allenhurstcleaners_v2/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
